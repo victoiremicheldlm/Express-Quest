@@ -45,7 +45,7 @@ const getUsers = (req, res) => {
   })
         .catch((err) => {
           console.error(err);
-          res.Status(500).send("Error retrieving data from database");
+          res.status(500).send("Error retrieving data from database");
         })
       };
 

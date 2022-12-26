@@ -1,6 +1,8 @@
+const database = require("./database");
+const express = require("express");
+
 require("dotenv").config();
 
-const express = require("express");
 
 const app = express();
 
@@ -20,6 +22,7 @@ app.get("/api/movies", movieHandlers.getMovies);
 app.get("/api/movies/:id", movieHandlers.getMovieById);
 app.post("/api/movies", movieHandlers.postMovie);
 app.put("/api/movies/:id", movieHandlers.updateMovie);
+app.delete("/api/movies/:id", movieHandlers.deleteMovie);
 
 const usersHandlers = require("./usersHandlers");
 
